@@ -1,109 +1,52 @@
 /* styles.css */
 
-/* Estilos generales del cuerpo */
-body {
-    font-family: Monaco, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Media Query para pantallas móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-/* Estilos del encabezado */
-header {
-    background: #333;
-    color: #fff;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Espacio entre texto y logo */
-    flex-direction: column; /* Coloca los elementos en columnas */
-    text-align: center; /* Alinea el texto al centro */
-}
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
 
-/* Estilos para el texto del banner */
-.banner-text {
-    margin-bottom: 2px; /* Espacio debajo del texto */
-}
+    .banner-title h1 {
+        font-size: 2em;
+    }
 
-.banner-title h1 {
-    font-size: 3em; /* Tamaño grande para el título */
-    margin: 0; /* Elimina el margen por defecto */
-}
+    .banner-title h2 {
+        font-size: 1em;
+    }
 
-.banner-title h2 {
-    font-size: 1.2em; /* Tamaño más pequeño para el subtítulo */
-    margin: 3px 0; /* Espacio vertical entre el título y el subtítulo */
-}
+    .banner-text p {
+        font-size: 1em;
+    }
 
-.banner-text p {
-    font-size: 1.2em; /* Tamaño del texto del eslogan */
-    margin: 0; /* Elimina el margen por defecto */
-}
+    main {
+        padding: 10px;
+    }
 
-/* Estilos del logo */
-.logo {
-    
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Hace que la imagen sea redonda */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor redondo */
-    margin: 0; /* Elimina el margen por defecto */
-}
+    #productos {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 15px;
+    }
 
-/* Estilos del contenedor principal */
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center; /* Centra el contenido de main horizontalmente */
-}
+    .producto img {
+        max-width: 80%;
+    }
 
-#productos {
-    display: grid; /* Usamos grid para un diseño de cuadrícula */
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-    gap: 20px; /* Espacio entre productos */
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    width: 100%; /* Ancho completo del contenedor */
-}
+    h2 {
+        font-size: 1.2em;
+    }
 
-/* Estilos de los productos */
-.producto {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
+    .precio {
+        font-size: 1em;
+    }
 
-.producto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.precio {
-    font-size: 1.2em;
-    color: #f00;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-}
-
-/* Estilos de los enlaces de WhatsApp */
-.enlace-whatsapp {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-.enlace-whatsapp:hover {
-    text-decoration: underline;
+    footer {
+        padding: 15px;
+        font-size: 0.8em;
+    }
 }
